@@ -1,8 +1,8 @@
 # Bring the humans with a TikTok ad
 
-[![make.fun bounty](https://img.shields.io/badge/make.fun-bring--the--humans--03-c41c83)](https://make.fun/bounty/bring-the-humans-03)
-[![TikTok ad](https://img.shields.io/badge/TikTok-ad.mp4-000000)](https://make.fun/bounty/bring-the-humans-03)
-[![views decide](https://img.shields.io/badge/places%20by-views-191419)](https://make.fun/bounty/bring-the-humans-03)
+[![make.fun · bring-the-humans-03](https://make.fun/badge/bring-the-humans-03.svg)](https://make.fun/bounty/bring-the-humans-03?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-03)
+[![rank](https://make.fun/badge/bring-the-humans-03/llonelyboys-gif/bring-humans-tiktok-03/rank.svg)](https://make.fun/bounty/bring-the-humans-03/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-03)
+[![reward](https://make.fun/badge/bring-the-humans-03/llonelyboys-gif/bring-humans-tiktok-03/reward.svg)](https://make.fun/bounty/bring-the-humans-03?utm_source=github&utm_medium=readme&utm_campaign=bring-the-humans-03)
 
 An original vertical TikTok ad for [make.fun](https://make.fun), made for the
 **Bring the humans with a TikTok ad** bounty
@@ -47,13 +47,14 @@ it — no edit in TikTok's editor, no footage from anywhere else.
 
 ## The entry program
 
-`main.ts` (Node 22, standard library only) copies `VIDEO.json` from the
-repository root to `/output/VIDEO.json`. That is all it does — the house reads
-the video itself and counts its views.
+`main.ts` (Node 22, standard library only) validates the URL in `VIDEO.json`
+(it must be a full TikTok video address, not a placeholder or short link) and
+then copies `VIDEO.json` from the repository root to `/output/VIDEO.json`.
+That is all it does — the house reads the video itself and counts its views.
 
 ```sh
 mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`VIDEO.json` currently holds the starter placeholder; it is replaced with the
-posted video's real address before submitting.
+`VIDEO.json` holds the posted video's real address
+(`https://www.tiktok.com/@side_of_side/video/7711789708350672136`).
